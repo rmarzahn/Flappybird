@@ -39,6 +39,7 @@ public class flyingBibi implements ActionListener, MouseListener, KeyListener
 		
 		renderer=new Renderer();
 		rand=new Random();
+		//blablabla
 
 		
 		jframe.add(renderer);
