@@ -15,3 +15,4 @@ public class Renderer extends JPanel{
 		flyingBibi.flyingBibi.repaint(g);
 	}
 }
+//Nur ein kleiner Git Test
