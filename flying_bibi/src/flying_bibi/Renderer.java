@@ -10,8 +10,9 @@ public class Renderer extends JPanel{
 	@Override
 	protected void paintComponent(Graphics g) {
 		// TODO Auto-generated method stub
+		//Funktion paintComponent der Mutterklasse wird aufgerufen
+		//nur components werden im jframe angezeigt
 		super.paintComponent(g);
-		
 		flyingBibi.flyingBibi.repaint(g);
 	}
 }
