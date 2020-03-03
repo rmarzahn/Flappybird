@@ -1,5 +1,6 @@
 package flappybird;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -12,14 +13,26 @@ public class Renderer extends JPanel{
 	
 	private static final long serialVersionUID = 1L;
 	
+	//Funktion paintComponent der Mutterklasse wird aufgerufen
 	protected void paintComponent(Graphics g) {
-		
-		if (Variablen.started) {
+			
+		//nur components werden im jframe angezeigt
+		if (Variablen.started && Variablen.start) {
 			super.paintComponent(g);
 			Graphics2D g2d = (Graphics2D) g;
 			g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-			g.drawImage(ImageLoader.img1, Variablen.backgroundX1, 0, 700, 700, null);
-			g.drawImage(ImageLoader.ibird,Variablen.birdx, Variablen.birdy, 50, 40, null);
+			if (Variablen.welt == 1) {
+				g.drawImage(ImageLoader.img1, Variablen.backgroundX1, 0, 1200, 700, null);
+				g.drawImage(ImageLoader.ibird,Variablen.birdx, Variablen.birdy, 50, 40, null);
+				g.setColor(Color.red);
+				g.fillOval(1145, 15, 30, 30);
+			}
+			if(Variablen.welt == 2) {
+				g.drawImage(ImageLoader.img2, Variablen.backgroundX1, 0, 1200, 700, null);
+				g.drawImage(ImageLoader.ibird,Variablen.birdx, Variablen.birdy, 50, 40, null);
+				g.setColor(Color.red);
+				g.fillOval(1145, 15, 30, 30);
+			}
 			repaint();
 			Variablen.flappybird.repaint(g);
 		}

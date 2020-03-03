@@ -9,17 +9,26 @@ import javax.imageio.ImageIO;
 public class ImageLoader {
 	
 	static BufferedImage img1;
+	static BufferedImage img2;
 	static BufferedImage ibird;
 	
 	public ImageLoader() {
 		try {
-			img1 = ImageIO.read(new File("res/bg.png"));
+			img1 = ImageIO.read(new File("res/water.jpg"));
+			ibird = ImageIO.read(new File("res/bird.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Bilder können nicht geladen werden!");
+		}			
+		
+		try {
+			img2 = ImageIO.read(new File("res/space2.jpeg"));
 			ibird = ImageIO.read(new File("res/bird.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Bilder können nicht geladen werden!");
 		}
 	}
-	
-
+		
 }
+	
