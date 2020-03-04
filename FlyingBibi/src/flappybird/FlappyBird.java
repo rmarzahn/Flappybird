@@ -270,7 +270,7 @@ public class FlappyBird implements ActionListener, KeyListener{
 		//wenn Game vorbei ist, Spielstand anzeigen -> wenn Highscore übertroffen diesen anzeigen
 		if (Variablen.gameOver && Variablen.started) {
 			g.drawString("Game Over!", 370, 150);
-			g.drawString(String.valueOf(Variablen.score), Variablen.WIDTH / 2 - 25, 80);
+			g.drawString(String.valueOf(Variablen.score), Variablen.WIDTH / 2 - 30, 80);
 		}
 		
 		

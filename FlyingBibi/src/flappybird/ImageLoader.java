@@ -10,6 +10,7 @@ public class ImageLoader {
 	
 	public static BufferedImage img1;
 	public static BufferedImage img2;
+	public static BufferedImage img3;
 	public static BufferedImage ibird;
 	
 	public ImageLoader() {
@@ -22,7 +23,14 @@ public class ImageLoader {
 		}			
 		
 		try {
-			img2 = ImageIO.read(new File("res/space2.jpeg"));
+			img2 = ImageIO.read(new File("res/bg.png"));
+			ibird = ImageIO.read(new File("res/bird.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Bilder können nicht geladen werden!");
+		}
+		try {
+			img3 = ImageIO.read(new File("res/space2.jpeg"));
 			ibird = ImageIO.read(new File("res/bird.png"));
 		} catch (IOException e) {
 			e.printStackTrace();

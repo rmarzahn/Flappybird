@@ -28,8 +28,15 @@ public class Renderer extends JPanel{
 				g.setColor(Color.red);
 				g.fillOval(1145, 15, 30, 30);
 			}
-			if(Variablen.welt == 2) {
+			if (Variablen.welt == 2) {
 				g.drawImage(ImageLoader.img2, Variablen.backgroundX1, 0, 1200, 700, null);
+				Variablen.flappybird.repaint(g);
+				g.drawImage(ImageLoader.ibird,Variablen.bird.x-5, Variablen.bird.y-3, 50, 40, null);
+				g.setColor(Color.red);
+				g.fillOval(1145, 15, 30, 30);
+			}
+			if(Variablen.welt == 3) {
+				g.drawImage(ImageLoader.img3, Variablen.backgroundX1, 0, 1200, 700, null);
 				Variablen.flappybird.repaint(g);
 				g.drawImage(ImageLoader.ibird,Variablen.bird.x-5, Variablen.bird.y-3, 50, 40, null);
 				g.setColor(Color.red);

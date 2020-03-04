@@ -1,5 +1,6 @@
 package flappybird;
 
+import java.awt.Rectangle;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -10,8 +11,8 @@ public class MouseInput implements MouseListener {
 		int mx = e.getX();
 		int my = e.getY();
 		
-		if(mx >= 200 && mx <= 520) {
-			if(my >= 450 && my <= 530) {
+		if(mx >= 50 && mx <= 350) {
+			if(my >= 420 && my <= 500) {
 				//PlayW1
 				System.out.println("ja");
 				Variablen.welt = 1;
@@ -21,11 +22,21 @@ public class MouseInput implements MouseListener {
 			}
 		}
 		
-		if(mx >= 700 && mx <= 1020) {
-			if(my >= 450 && my <= 530) {
+		if(mx >= 450 && mx <= 750) {
+			if(my >= 420 && my <= 500) {
 				//PlayW2
 				System.out.println("ja");
 				Variablen.welt = 2;
+				Variablen.gameOver = false;
+				Variablen.started= true;
+				Variablen.start = true;
+			}
+		}
+		if(mx >= 850 && mx <= 1150) {
+			if(my >= 420 && my <= 500) {
+				//PlayW3
+				System.out.println("ja");
+				Variablen.welt = 3;
 				Variablen.gameOver = false;
 				Variablen.started= true;
 				Variablen.start = true;
@@ -35,9 +46,9 @@ public class MouseInput implements MouseListener {
 
 		/**
 		 * 
-		public static Rectangle playButtonW1 = new Rectangle(200, 450, 320, 80);
-		public static Rectangle playButtonW2 = new Rectangle(700, 450, 320, 80);
-		public static Rectangle helpButton = new Rectangle(535, 580, 150, 60);
+		public static Rectangle playButtonW1 = new Rectangle(50, 420, 300, 80);
+		public static Rectangle playButtonW2 = new Rectangle(450, 420, 300, 80);
+		public static Rectangle playButtonW3 = new Rectangle(850, 420, 300, 80);
 		*/
 		
 		if (mx >= 1100 && mx <= 1200) {
